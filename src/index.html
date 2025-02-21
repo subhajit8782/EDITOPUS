@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Assets/Logo&Icons/Tab Logo.png" type="image/x-icon" />
+    <title>EditOpus Media</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <style>
+        /*
+        * {
+            outline: 2px solid red;
+          }
+        */
+
+        /* Services Section - Responsive Adjustments */
+        .services-container-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            justify-content: center;
+            padding: 0 1rem;
+        }
+
+        .services-card {
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #5206a9a7, #fcfcfcfc);
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .services-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .hero-btn {
+                font-size: 15px;
+            }
+
+            .hero-port {
+                text-decoration: underline;
+            }
+
+            .services-container-2 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2px;
+                padding: 0 10px;
+            }
+
+            .services-card {
+                width: 100%;
+                max-width: 180px;
+                padding: 5px;
+            }
+
+            .services-card img {
+                height: 120px;
+            }
+
+            .services-heading {
+                font-size: 1.5rem;
+            }
+
+            #web-development-heading {
+                font-size: 1.4rem;
+            }
+
+            .services-details {
+                font-size: 0.9rem;
+                line-height: 1.3rem;
+            }
+
+            .services-card:nth-child(5) {
+                grid-column: span 2;
+                justify-self: center;
+            }
+        }
+
+
+        /* Fix for blank space on the right side of user in mobile */
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Adjust the container width to prevent overflow */
+        .hero-container {
+            width: 100%;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+
+        /* Our People Section - Two Cards per Row on Mobile */
+        @media only screen and (max-width: 768px) {
+            .px-20 {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .card-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            .card-container {
+                width: 250px;
+                height: 200px;
+            }
+
+            .px-20.people-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                justify-content: center;
+            }
+
+            .card-container {
+                width: 100%;
+                /* Make sure cards fit well in the grid */
+                max-width: 160px;
+                /* Adjust size to fit two cards per row */
+                margin: auto;
+            }
+
+            
+        }
+    </style>
+</head>
+
+<body class="font-[syne] bg-[#f0e3ff]">
+
+    <!-- Home Section Starts here  -->
+    <div class="home-container bg-[#01011f] h-fit" id="home">
+        <!-- Navbar starts here -->
+        <header>
+            <div class="navbar-container flex justify-between items-center px-16 h-20">
+                <div class="nav-logo-container">
+                    <img src="/Assets/Logo&Icons/Logo.png" alt="EditOpus Logo" class="logo w-16 mt-8">
+                </div>
+
+            </div>
+        </header>
+        <!-- Navbar ends here -->
+
+        <!-- Hero section starts here  -->
+        <div class="hero-container flex md:flex-row flex-col-reverse flex-wrap flex-shrink w-full justify-around ">
+            <div class="hero-text h-full w-[50%] md:pt-8 pt-10 md:pl-10 pl-5 flex gap-8 flex-col items-start md:mt-20">
+                <div class="hero-text-1 text-white md:text-3xl text-xl font-medium pl-2">Hello World, <b
+                        class="text-[#01E9FF]">we
+                        are</b></div>
+                <div class="hero-main-text text-white flex md:text-[120px] text-5xl font-bold">
+                    <p class="text-[#2AFF25]">E</p>
+                    <p>dit</p>
+                    <p class="text-[#FF6600]">O</p>
+                    <p>pus</p>
+                </div>
+                <div class="hero-text-2 text-[#F807C0] md:text-4xl text-md font-bold pl-2 w-[300px] md:w-auto">“Crafting
+                    Visions, Elevating Brands”
+                </div>
+                <div class="flex items-center">
+                    <a href="#footer"><button class="hero-btn text-white md:text-[20px] font-bold md:my-20 my-10">
+                            Contact Us
+                        </button></a>
+                    <svg width="80" height="20" viewBox="0 0 198 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M197.66 9L189 0.339746L180.34 9L189 17.6603L197.66 9ZM0 10.5L189 10.5V7.5L0 7.5L0 10.5Z"
+                            fill="white" />
+                    </svg>
+                    <div class="hero-port text-slate-300 font-semibold text-xl ml-8">
+                        <a href="https://linktr.ee/EditOpus_Media" target="_blank" id="portfolio-link">View
+                            Portfolio</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="hero-gif-container rounded-full mt-14 md:mt-8 md:h-fit md:w-auto h-[180px] w-[180px] mx-auto">
+                <img src="/Assets/GIFs/Start Up 3D Animated Icon.gif" alt=""
+                    class="hero-gif rounded-full md:w-[550px] md:h-auto w-auto h-auto">
+            </div>
+        </div>
+        <!-- Hero section ends here -->
+    </div>
+    <!-- Home section ends here  -->
+
+    <!-- --------------------------------------- -->
+
+    <!-- Services section starts here  -->
+    <div class="service-container" id="service">
+        <div>
+            <h1 class="mx-auto text-center font-bold text-6xl text-[#7800ff] mt-16 mb-20">Our Services</h1>
+        </div>
+
+        <div class="services-container-2 flex flex-wrap flex-shrink justify-center md:gap-20 gap-20 text-center">
+            <!-- Video Editing  -->
+            <div
+                class="services-card flex flex-col w-[400px] p-5 gap-5 shadow-md shadow-gray-500 rounded-xl bg-[#ffffff]">
+                <div class="services-img place-items-center">
+                    <!-- <img src="/Assets/Services/Video Editor Image.png" alt="" class="w-96"> -->
+                    <img src="/Assets/Services/Podcast Episode 3D Animated Icon.gif" alt=""
+                        class="w-full bg-slate-100 h-64 shadow-md border-2 border-gray-500 rounded-lg">
+                </div>
+                <div class="services-text text-slate-600">
+                    <h1 class="services-heading font-bold text-black text-2xl">Video Editing</h1>
+                    <p class="services-details text-lg font-medium my-5 mt-14">Seamless edits, stunning visuals, and
+                        cinematic storytelling.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Graphic Designing  -->
+            <div
+                class="services-card flex flex-col w-[400px] p-5 text-left gap-5 shadow-md shadow-gray-500 rounded-xl bg-[#ffffff]">
+                <div class="services-img place-items-center">
+                    <!-- <img src="/Assets/Services/Video Editor Image.png" alt="" class="w-96"> -->
+                    <img src="/Assets/Services/Landing Page 3D Animated Icon.gif" alt=""
+                        class="w-full bg-slate-100 h-64 shadow-md border-2 border-gray-500 rounded-lg">
+                </div>
+                <div class="services-text text-slate-600">
+                    <h1 class="services-heading font-bold text-black text-2xl">Graphic Designing</h1>
+                    <p class="services-details text-lg font-medium my-5">Creative, compelling, and visually
+                        striking designs that stand out.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Videography  -->
+            <div
+                class="services-card flex flex-col w-[400px] p-5 text-left gap-5 shadow-md shadow-gray-500 rounded-xl bg-[#ffffff]">
+                <div class="services-img place-items-center">
+                    <!-- <img src="/Assets/Services/Video Editor Image.png" alt="" class="w-96"> -->
+                    <img src="/Assets/Services/Video Editing Software 3D Animated Icon.gif" alt=""
+                        class="w-full bg-slate-100 h-64 shadow-md border-2 border-gray-500 rounded-lg">
+                </div>
+                <div class="services-text text-slate-600">
+                    <h1 class="services-heading font-bold text-black text-2xl">Videography</h1>
+                    <p class="services-details text-lg font-medium my-5 mt-[60px]">Capturing moments with precision,
+                        creativity, and storytelling magic.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Web Development  -->
+            <div
+                class="services-card flex flex-col w-[400px] p-5 text-left gap-5 shadow-md shadow-gray-500 rounded-xl bg-[#ffffff]">
+                <div class="services-img place-items-center">
+                    <!-- <img src="/Assets/Services/Video Editor Image.png" alt="" class="w-96"> -->
+                    <img src="/Assets/Services/Website 3D Animated Icon.gif" alt=""
+                        class="w-full bg-slate-100 h-64 shadow-md border-2 border-gray-500 rounded-lg">
+                </div>
+                <div class="services-text text-slate-600">
+                    <h1 class="services-heading font-bold text-black text-2xl" id="web-development-heading">Web
+                        Development</h1>
+                    <p class="services-details text-lg font-medium my-5">Modern, responsive websites built for
+                        performance and user experience.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Social Media Management  -->
+            <div
+                class="services-card flex flex-col w-[400px] p-5 text-left gap-5 shadow-md shadow-gray-500 rounded-xl bg-[#ffffff]">
+                <div class="services-img place-items-center">
+                    <!-- <img src="/Assets/Services/Video Editor Image.png" alt="" class="w-96"> -->
+                    <img src="/Assets/Services/Social Media Content Speaker.gif" alt=""
+                        class="w-full bg-slate-100 h-64  shadow-md border-2 border-gray-500 rounded-lg">
+                </div>
+                <div class="services-text text-slate-600">
+                    <h1 class="services-heading font-bold text-black text-2xl ">Social Media Marketing</h1>
+                    <p class="services-details text-lg font-medium my-5 ">Engaging content, strategic
+                        campaigns, and impactful brand growth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services section ends here  -->
+
+    <!-- --------------------------------------- -->
+
+    <!-- Portfolio section starts here  -->
+    <div class="portfolio-container-main" id="portfolio">
+        <h1 class="portfolio-heading people-heading mx-auto text-center font-bold text-6xl text-[#01011f] my-20">Our
+            Portfolio</h1>
+        <div
+            class="portfolio-container relative flex w-[85%] mx-auto justify-center gap-10 items-center bg-[#fdfdff] rounded-[30px] md:px-10 md:py-5 py-10 text-center md:text-left shadow-xl">
+            <!-- <svg width="651" height="215" viewBox="0 0 651 215" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="place-items-start absolute left-0 z-auto top-0">
+                <path
+                    d="M612.99 1.08871C626.542 0.800232 639.264 0.755508 651 0.920685C638.095 0.920685 625.426 0.977448 612.99 1.08871C435.181 4.87367 114.367 50.6197 0 214.825V119.868C15.6079 81.2795 160.618 5.13573 612.99 1.08871Z"
+                    fill="#D1A9FF" />
+                <path
+                    d="M0 26.8252V119.325C83.2 24.1252 424 0.991829 584 1.32516C407.667 0.325165 49.7 -1.07484 28.5 1.32516C7.29999 3.72517 0.666687 19.3252 0 26.8252Z"
+                    fill="#2B0156" />
+            </svg> -->
+
+            <div class="portfolio-img hidden md:block">
+                <img src="/Assets/Logo&Icons/Portfolio Img.png" alt="" class="z-20 relative">
+            </div>
+            <div class="portfolio-text-container w-[70%] flex flex-col gap-10">
+                <h1 class="portfolio-head font-bold text-4xl">Explore Our Creative World</h1>
+                <p class="portfolio-text w-fit text-slate-600 font-extralight">Dive into a collection of our finest
+                    work, where creativity meets precision.
+                    Our portfolio showcases the full range of graphic design and video editing expertise, from stunning
+                    visual concepts to impactful storytelling. Each project reflects our passion for design and our
+                    commitment to delivering exceptional results.
+                </p>
+                <div class="flex items-center z-20 mx-auto md:mx-0">
+                    <a href="https://linktr.ee/EditOpus_Media"
+                        class="portfolio-btn cursor-pointer text-white rounded-3xl md:px-8 w-auto px-5 py-2 md:text-xl font-bold bg-[#472085]">
+                        <nav>Explore Our Portfolio</nav>
+                    </a>
+                    <svg width="150" height="50" class="hidden md:block" viewBox="0 0 198 18" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M197.66 9L189 0.339746L180.34 9L189 17.6603L197.66 9ZM0 10.5L189 10.5V7.5L0 7.5L0 10.5Z"
+                            fill="#2B0156" />
+                    </svg>
+                </div>
+                <!-- <svg width="651" height="215" viewBox="0 0 651 215" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="place-items-end absolute right-0 bottom-0">
+                    <path
+                        d="M38.0102 213.736C24.4578 214.025 11.7362 214.07 0 213.904C12.9048 213.904 25.5737 213.848 38.0102 213.736C215.819 209.951 536.633 164.205 651 0V94.9576C635.392 133.546 490.382 209.689 38.0102 213.736Z"
+                        fill="#D1A9FF" />
+                    <path
+                        d="M651 188V95.5C567.8 190.7 227 213.833 67 213.5C243.333 214.5 601.3 215.9 622.5 213.5C643.7 211.1 650.333 195.5 651 188Z"
+                        fill="#2B0156" />
+                </svg> -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio section ends here  -->
+
+    <!-- --------------------------------------- -->
+
+
+
+    <!-- --------------------------------------- -->
+
+    <!-- Our People section starts here  -->
+    <div id="people">
+        <div>
+            <h1 class="people-heading mx-auto text-center font-bold text-4xl text-[#01011f] mt-20 mb-10">Our
+                People</h1>
+        </div>
+
+        <div class="w-auto h-auto">
+            <h1 class="text-center md:ml-20 mx-auto text-2xl bg-white w-fit font-semibold mb-10">Heads (Leadership
+                Team):
+            </h1>
+            <div class="people-container px-20 w-[100%] flex flex-wrap gap-10 justify-center items-center">
+                <!-- People 1 -->
+                <div class="card-container">
+                    <img src="/Assets/People/Swapnil Bose.jpg" alt="Swapnil Bose Image" class="card-image">
+                    <div class="card-details">
+                        <h3>Swapnil Bose</h3>
+                        <h4>Swapnil Bose</h4>
+                        <p>Founder & CEO</p>
+                    </div>
+                </div>
+                <!-- People 2 -->
+                <div class="card-container">
+                    <img src="/Assets/People/Aviraj Dutta.jpg" alt="Aviraj Dutta Image" class="card-image">
+                    <div class="card-details">
+                        <h3>Aviraj Dutta</h3>
+                        <h4>Aviraj Dutta</h4>
+                        <p>Cheif Marketing Officer (CMO)</p>
+                    </div>
+                </div>
+                <!-- People 3 -->
+                <div class="card-container">
+                    <img src="/Assets/People/Soumyadeep Mondal.jpg" alt="Soumyadeep Mondal Image" class="card-image">
+                    <div class="card-details">
+                        <h3>Soumyadeep Mondal</h3>
+                        <h4>Soumyadeep Mondal</h4>
+                        <p>Cheif operations Officer (COO)</p>
+                    </div>
+                </div>
+                <!-- People 4 -->
+                <div class="card-container">
+                    <img src="/Assets/People/Ayush Haldar.jpg" alt="Ayush Haldar Image" class="card-image">
+                    <div class="card-details">
+                        <h3>Ayush Haldar</h3>
+                        <h4>Ayush Haldar</h4>
+                        <p>Co-Founder</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Team members section  -->
+            <h1
+                class="head-people-heading text-center md:ml-20 mx-auto text-2xl bg-slate-800 w-fit font-semibold mt-16 mb-6">
+                Team Members:
+            </h1>
+            <div class="people-container px-20 w-[100%] flex flex-wrap gap-10 justify-center items-center">
+                <!-- People 5 -->
+                <div class="card-container">
+                    <img src="/Assets/People/Unknown_person.jpg" alt="Subhajit Sarkar Image" class="card-image">
+                    <div class="card-details">
+                        <h3>Subhajit Sarkar</h3>
+                        <h4>Subhajit Sarkar</h4>
+                        <p>Web Development Head</p>
+                    </div>
+                </div>
+                <!-- People 6 -->
+                <div class="card-container">
+                    <img src="/Assets/People/Shahidur Rahaman.jpg" alt="Shahidur Rahaman Image" class="card-image">
+                    <div class="card-details">
+                        <h3>Shahidur Rahaman</h3>
+                        <h4>Shahidur Rahaman</h4>
+                        <p>Graphic Designing Head</p>
+                    </div>
+                </div>
+                <!-- People 7 -->
+                <div class="card-container">
+                    <img src="/Assets/People/Prasun Banerjee.jpg" alt="Prasun Banerjee Image" class="card-image">
+                    <div class="card-details">
+                        <h3>Prasun Banerjee</h3>
+                        <h4>Prasun Banerjee</h4>
+                        <p>Video Editor</p>
+                    </div>
+                </div>
+                <!-- People 8 -->
+                <div class="card-container">
+                    <img src="/Assets/People/Unknown_person.jpg" alt="Anonymous Camera Team Image" class="card-image">
+                    <div class="card-details">
+                        <h3>Anonymous Camera Team</h3>
+                        <h4>Anonymous Camera Team</h4>
+                        <p id="camera-card-p" class="">Cinematographers/<br>Camera Operations</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Our People Section ends here  -->
+
+    <!-- Testimonial section starts here  -->
+    <div>
+        <h1 class="testimonial-heading mx-auto text-center font-bold md:text-6xl text-4xl text-[#01011f] mt-20">
+            Testimonials</h1>
+    </div>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active">
+                <img src="/Assets/Testimonials/erasebg-transformed.png" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="/Assets/Testimonials/erasebg-transformed (1).png" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="/Assets/Testimonials/erasebg-transformed (2).png" alt="Image 3">
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial section ends here  -->
+
+
+    <!-- Footer starts here -->
+    <footer id="footer">
+        <div class="footer-container bg-[#01011f] px-10 mt-20 w-screen">
+            <div class=" h-auto flex flex-wrap gap-10 justify-evenly items-start p-10 border-b-2 border-slate-700">
+                <div class="flex flex-col gap-8">
+                    <div class="logo-container flex items-center gap-4">
+                        <img src="/Assets/Logo&Icons/Logo.png" alt="Editopus logo" class="w-16">
+                        <div class="hero-main-text text-white flex text-4xl font-bold">
+                            <p class="text-[#2AFF25]">E</p>
+                            <p>dit</p>
+                            <p class="text-[#FF6600]">O</p>
+                            <p>pus</p>
+                        </div>
+                    </div>
+                    <div class="hero-text-2 text-[#c9aac2] text-2xl font-medium pl-2 leading-10">“Crafting <b
+                            class="text-[#9232ff]">Visions</b>,
+                        <br>Elevating
+                        <b class="text-yellow-300">Brands</b>”
+                    </div>
+                </div>
+                <div class="services  border-slate-700 border-double px-10 h-60">
+                    <div class="flex items-center gap-4">
+                        <h2 class="text-white font-bold text-xl">Our Services</h2> <svg width="80" height="18"
+                            viewBox="0 0 198 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M197.66 9L189 0.339746L180.34 9L189 17.6603L197.66 9ZM0 10.5L189 10.5V7.5L0 7.5L0 10.5Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <ul class="text-slate-300 md:mt-10 mt-5 font-medium flex flex-col gap-3">
+                        <li>Video Editor</li>
+                        <li>Graphic Designing</li>
+                        <li>Videography</li>
+                        <li>Web Development</li>
+                        <li>Social Media Marketing</li>
+                    </ul>
+                </div>
+                <div class="contact-us  border-slate-700 border-double pl-8 h-60">
+                    <div class="flex items-center gap-4">
+                        <h2 class="text-white font-bold text-xl ">Get In Touch</h2>
+                        <svg width="80" height="18" viewBox="0 0 198 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M197.66 9L189 0.339746L180.34 9L189 17.6603L197.66 9ZM0 10.5L189 10.5V7.5L0 7.5L0 10.5Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <div class="flex items-center gap-3 md:mt-9 mt-5 mb-5 text-slate-400">
+                        <svg width="20" class="" height="20" viewBox="0 0 38 36" fill="gray"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M34.631 23.9378L32.6471 22.1436C31.6519 21.2441 30.365 20.7466 29.0251 20.7466C27.4997 20.7466 26.0385 21.3961 25.0159 22.5262L23.8414 23.8254C23.3386 24.3808 22.9649 25.0196 22.7268 25.7256L22.6219 26.0396L22.3131 25.918C17.0708 23.848 12.7988 19.9275 10.2843 14.8788L10.1186 14.5451L10.476 14.4376C11.4159 14.1555 12.2616 13.6189 12.9215 12.8878L14.0973 11.5901C15.0653 10.519 15.5584 9.13602 15.4858 7.69337C15.4142 6.25257 14.7839 4.92484 13.7142 3.95714L11.731 2.16522C10.7351 1.26426 9.44895 0.768921 8.109 0.768921C6.58293 0.768921 5.12173 1.41591 4.0999 2.54563L2.92457 3.84628C2.77404 4.01238 2.62907 4.19442 2.49263 4.39204L2.4385 4.45174C1.32953 5.40016 0.385558 7.70893 0.932439 10.5353C3.45736 23.6856 14.5355 33.7056 27.8727 34.9013C29.6231 35.0596 31.2697 34.6985 32.5188 33.9318C33.0186 33.6429 33.4598 33.287 33.838 32.8676L35.0137 31.5681C37.0117 29.3583 36.8401 25.9358 34.631 23.9378Z"
+                                fill="white" />
+                        </svg>
+                        <a class="text-slate-300 font-[poppins] text-normal tracking-wide">+91 62911 21099</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <svg width="22" height="20" viewBox="0 0 42 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M36.4916 0H5.14718C2.30902 0 0 2.30903 0 5.14718V24.8828C0 27.721 2.30902 30.0299 5.14718 30.0299H36.4916C39.3298 30.0299 41.6387 27.7209 41.6387 24.8828V5.14718C41.6388 2.30903 39.3298 0 36.4916 0ZM39.5976 5.14718V24.8828C39.5976 25.3408 39.4972 25.7754 39.3185 26.1671L26.5845 15.015L39.3185 3.8628C39.4973 4.2546 39.5976 4.6893 39.5976 5.14718ZM36.4916 2.04113C36.9579 2.04113 37.4002 2.14508 37.7975 2.32995L21.7923 16.3469C21.2377 16.8326 20.4012 16.8328 19.8464 16.3469L3.8412 2.32995C4.23848 2.14508 4.68075 2.04113 5.14703 2.04113H36.4916ZM2.32028 26.1672C2.14155 25.7755 2.0412 25.3408 2.0412 24.8829V5.14725C2.0412 4.6893 2.14163 4.25468 2.32028 3.86288L15.0543 15.0151L2.32028 26.1672ZM5.14718 27.9889C4.68083 27.9889 4.23855 27.8849 3.84128 27.7L16.69 16.4476L18.4265 17.9684C19.1087 18.5658 19.9639 18.8644 20.8194 18.8644C21.6747 18.8644 22.5303 18.5657 23.2123 17.9684L24.9489 16.4476L37.7975 27.7C37.4002 27.8849 36.958 27.9889 36.4917 27.9889H5.14718Z"
+                                fill="white" />
+                        </svg>
+
+                        <a
+                            class="text-slate-300 font-[poppins] text-sm text-normal tracking-wide">EditopusMedia@gmail.com</a>
+                    </div>
+
+
+                    <div class="flex flex-col justify-start">
+                        <div class="flex items-center gap-4">
+                            <h2 class="text-white font-bold text-xl mt-8 item">Follow us on</h2>
+                            <svg width="80" height="18" viewBox="0 0 198 18" class="mt-7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M197.66 9L189 0.339746L180.34 9L189 17.6603L197.66 9ZM0 10.5L189 10.5V7.5L0 7.5L0 10.5Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div class="flex gap-8 pt-4 pr-4 pb-4 items-center justify-between w-fit">
+                            <a class="" href="https://www.instagram.com/editopus.media?igsh=ajJwN25yaDl5NWN2"
+                                target="_blank"><svg width="20" height="20" class="follow relative top-[2px]"
+                                    viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.4712 2.78817C19.6029 2.78817 20.092 2.80365 21.7235 2.87862C23.2324 2.94764 24.0511 3.19992 24.5961 3.41174C25.3184 3.69258 25.8337 4.02697 26.3752 4.56842C26.9166 5.10987 27.2522 5.62513 27.533 6.34746C27.7448 6.89248 27.9971 7.7124 28.0662 9.22132C28.1399 10.8528 28.1566 11.3419 28.1566 15.4736C28.1566 19.6053 28.1411 20.0944 28.0662 21.7259C27.9971 23.2348 27.7448 24.0535 27.533 24.5985C27.2522 25.3208 26.9166 25.8361 26.3752 26.3776C25.8337 26.919 25.3184 27.2546 24.5961 27.5342C24.0511 27.746 23.2312 27.9983 21.7235 28.0673C20.092 28.1411 19.6029 28.1578 15.4712 28.1578C11.3395 28.1578 10.8504 28.1423 9.21893 28.0673C7.71001 27.9983 6.89129 27.746 6.34627 27.5342C5.62394 27.2534 5.10868 26.9178 4.56723 26.3776C4.02578 25.8361 3.6902 25.3208 3.40936 24.5985C3.19754 24.0535 2.94526 23.2348 2.87624 21.7259C2.80246 20.0944 2.78579 19.6053 2.78579 15.4736C2.78579 11.3419 2.80127 10.8528 2.87624 9.22132C2.94526 7.7124 3.19754 6.89367 3.40936 6.34746C3.6902 5.62513 4.02578 5.10987 4.56723 4.56842C5.10868 4.02697 5.62394 3.69139 6.34627 3.41174C6.89129 3.19992 7.7112 2.94764 9.21893 2.87862C10.8504 2.80365 11.3395 2.78817 15.4712 2.78817ZM15.4712 0C11.2693 0 10.7421 0.0178535 9.09161 0.0928235C7.44465 0.167793 6.32009 0.429598 5.33596 0.811588C4.31851 1.20667 3.45577 1.73622 2.5954 2.59659C1.73503 3.45696 1.20667 4.3197 0.811588 5.33715C0.428408 6.32128 0.167793 7.44584 0.0928235 9.0928C0.0178535 10.7433 0 11.2705 0 15.4724C0 19.6743 0.0178535 20.2014 0.0928235 21.852C0.167793 23.4989 0.429598 24.6235 0.811588 25.6076C1.20667 26.6251 1.73622 27.4878 2.5954 28.3482C3.45577 29.2085 4.31851 29.7369 5.33596 30.1332C6.32009 30.5152 7.44465 30.777 9.09161 30.8519C10.7421 30.9269 11.2693 30.9448 15.4712 30.9448C19.6731 30.9448 20.2003 30.9269 21.8508 30.8519C23.4977 30.777 24.6223 30.5152 25.6064 30.1332C26.6239 29.7381 27.4866 29.2085 28.347 28.3482C29.2074 27.4878 29.7357 26.6251 30.132 25.6076C30.514 24.6235 30.7758 23.4989 30.8508 21.852C30.9257 20.2014 30.9436 19.6743 30.9436 15.4724C30.9436 11.2705 30.9257 10.7433 30.8508 9.0928C30.7758 7.44584 30.514 6.32128 30.132 5.33715C29.7369 4.3197 29.2074 3.45696 28.347 2.59659C27.4866 1.73622 26.6239 1.20786 25.6064 0.811588C24.6223 0.429598 23.4977 0.167793 21.8508 0.0928235C20.2003 0.0178535 19.6731 0 15.4712 0Z"
+                                        fill="white" />
+                                    <path
+                                        d="M15.4712 7.52673C11.0837 7.52673 7.52557 11.0836 7.52557 15.4724C7.52557 19.8611 11.0825 23.418 15.4712 23.418C19.8599 23.418 23.4168 19.8611 23.4168 15.4724C23.4168 11.0836 19.8587 7.52673 15.4712 7.52673ZM15.4712 20.6298C12.6223 20.6298 10.3137 18.32 10.3137 15.4724C10.3137 12.6235 12.6223 10.3149 15.4712 10.3149C18.3201 10.3149 20.6287 12.6235 20.6287 15.4724C20.6287 18.3212 18.3189 20.6298 15.4712 20.6298Z"
+                                        fill="white" />
+                                    <path
+                                        d="M25.5874 7.21384C25.5874 8.23962 24.7556 9.07142 23.731 9.07142C22.7052 9.07142 21.8746 8.23962 21.8746 7.21384C21.8746 6.18806 22.7052 5.35742 23.731 5.35742C24.7556 5.35623 25.5874 6.18806 25.5874 7.21384Z"
+                                        fill="white" />
+                                </svg></a>
+                            <a class="" href="https://www.linkedin.com/company/editopus/" target="_blank"><svg
+                                    width="20" height="20" class="follow relative top-[]" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.24106 10.5706H0.634033V31.7132H7.24106V10.5706Z" fill="white" />
+                                    <path
+                                        d="M3.90662 7.80228C6.06454 7.80228 7.81322 6.05407 7.81322 3.90047C7.81322 1.74687 6.06454 0 3.90662 0C1.7487 0 0 1.74687 0 3.90047C0 6.05407 1.74735 7.80228 3.90662 7.80228Z"
+                                        fill="white" />
+                                    <path
+                                        d="M17.8018 20.6146C17.8018 17.6422 19.183 15.8713 21.8269 15.8713C24.2568 15.8713 25.4239 17.5716 25.4239 20.6146C25.4239 23.6603 25.4239 31.7133 25.4239 31.7133H32C32 31.7133 32 23.9897 32 18.3263C32 12.6629 28.7597 9.92529 24.2339 9.92529C19.7067 9.92529 17.8018 13.4191 17.8018 13.4191V10.5707H11.4641V31.7133H17.8018C17.8018 31.7133 17.8018 23.8723 17.8018 20.6146Z"
+                                        fill="white" />
+                                </svg></a>
+                            <a class=""><svg width="25" height="20" class="follow relative top-[2px]"
+                                    viewBox="0 0 44 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M43.0808 4.77781C42.5754 2.89689 41.0835 1.41642 39.1906 0.913007C35.7594 4.77361e-06 22 0 22 0C22 0 8.24056 4.77361e-06 4.8094 0.913007C2.91647 1.41527 1.42579 2.89689 0.919225 4.77781C-8.29107e-07 8.18613 0 15.2979 0 15.2979C0 15.2979 -8.29107e-07 22.4098 0.919225 25.8181C1.42579 27.699 2.91647 29.1795 4.8094 29.6829C8.24056 30.5959 22 30.5959 22 30.5959C22 30.5959 35.7582 30.5959 39.1906 29.6829C41.0835 29.1806 42.5742 27.699 43.0808 25.8181C44 22.4098 44 15.2979 44 15.2979C44 15.2979 44.0012 8.18613 43.0808 4.77781Z"
+                                        fill="white" />
+                                    <path d="M17 21.9147V9L28.5002 15.4574L17 21.9147Z" fill="#222221" />
+                                </svg></a>
+                            <a class="" href="https://www.facebook.com/share/15e4Rise6F/" target="_blank"><svg
+                                    width="20" height="20" class="follow" viewBox="0 0 16 35" fill="red"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.57238 34.1137H10.4411V16.9123H15.2332L15.7437 11.1527H10.4399C10.4399 11.1527 10.4399 9.00234 10.4399 7.87184C10.4399 6.51405 10.7124 5.97736 12.0261 5.97736C13.0829 5.97736 15.7437 5.97736 15.7437 5.97736V0C15.7437 0 11.8238 0 10.9873 0C5.87622 0 3.57119 2.25148 3.57119 6.56047C3.57119 10.3137 3.57119 11.1527 3.57119 11.1527H0V16.9849H3.57357L3.57238 34.1137Z"
+                                        fill="white" />
+                                </svg></a>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <h2 class="font-light py-4 text-center text-slate-500">&copy; EditOpus Media Private Limited 2025. All
+                rights
+                reserved.</h2>
+        </div>
+
+    </footer>
+    <!-- Footer Ends here  -->
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        function moveToNextSlide() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        // Set interval to automatically move to the next slide every 3 seconds
+        setInterval(moveToNextSlide, 4000);
+    </script>
+</body>
+
+</html>
